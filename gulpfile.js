@@ -2,12 +2,14 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const gutil = require('gulp-util');
+const ngAnnotate = require('gulp-ng-annotate');
 const nodemon = require( 'nodemon' );
 
 gulp.task('js', function(){
     gulp.src(['ng/module.js', 'ng/**/*.js'])
         .pipe(sourcemaps.init())
             .pipe(concat('app.js'))
+            .pipe(ngAnnotate())
             .on('error', function(err){
                 gutil.log(
                     gutil.colors.red('[Error]'), 
