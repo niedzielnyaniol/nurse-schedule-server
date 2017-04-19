@@ -1,0 +1,38 @@
+{
+  "name": "nurse-sheduler-project-front",
+  "version": "1.0.0",
+  "description": "Team project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niedzielnyaniol/nurse-project-frontend.git"
+  },
+  "keywords": [
+    "nurse",
+    "sheduler",
+    "project",
+    "team",
+    "front",
+    "end",
+    "node",
+    "js",
+    "mongo",
+    "express"
+  ],
+  "author": "maciejkaczmarczyk95@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niedzielnyaniol/nurse-project-frontend/issues"
+  },
+  "homepage": "https://github.com/niedzielnyaniol/nurse-project-frontend#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^2.6.0"
+  }
+}
