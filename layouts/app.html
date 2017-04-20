@@ -7,7 +7,20 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body ng-app="app" ng-controller="ApplicationController">
-        <div ng-view>Loading..</div>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Nurse Sheduler</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias eaque odio temporibus itaque dolorem, numquam qui, minus nemo inventore aperiam iste dolorum nam, pariatur harum possimus tempore ipsam ipsum.</p>
+            </div>
+            <button ng-disabled="isDisabled" ng-hide="isHidden" class="btn btn-primary btn-lg btn-block" ng-click="generateSchedule()">Generate Shedule</button>
+
+            <div ng-if="calendar">
+                <div ng-repeat="day in calendar">
+                    {{day['number']}}
+                </div>
+            </div>
+            
+        </div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
         <script src="/app.js"></script>
