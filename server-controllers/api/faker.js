@@ -1,20 +1,12 @@
 const router = require('express').Router();
+const dataFaker = require('../modules/dataFaker');
 
-dataFaker = {
-    getData: function(){
-
-        var data = [];
-
-        //TODO: data faker
-        
-        return data;
-    }
-}
-
-router.get('/', function(req, res, next){
+router.get('/', function(req, res, next){  
+    var randomFirstDay = dataFaker.getRandomInt(0, 6);
+    var data = {shedule:dataFaker.getData(randomFirstDay)};
     
-    
-    res.json({shedule:dataFaker.getData()});
+    console.log(JSON.stringify(data, null, 4));  
+    res.json(data);
 });
 
 module.exports = router;
