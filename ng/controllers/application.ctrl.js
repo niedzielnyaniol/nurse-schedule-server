@@ -10,10 +10,9 @@ angular.module('app')
         
         ApplicationService.fetchData()
             .then(function success(data){
-                console.log(data.data);
                 $scope.isHidden = true;
                 $scope.calendar = data.data;
-        });
+            });
     };
          
 });

@@ -8,5 +8,6 @@ router.get('/', function(req, res){
 
 router.use(express.static(__dirname + '/../assets'));
 router.use(express.static(__dirname + '/../templates'));
+router.use(express.static(__dirname + '/../directives-templates'));
 
 module.exports = router;
