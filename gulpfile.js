@@ -22,7 +22,7 @@ gulp.task('js', function(){
 });
 
 gulp.task('watch:js', ['js'], function(){
-    gulp.watch('ng/**/*.js');
+    gulp.watch('ng/**/*.js', ['js']);
 });
 
 gulp.task( 'dev:server' , function(){
