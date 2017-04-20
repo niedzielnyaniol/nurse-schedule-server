@@ -105,12 +105,14 @@ dataFaker = {
             if((i % 7 == 5 || i % 7 == 6) && i != 0){
                 tmpData = {
                     'number': i - randomFirstDay,
+                    'dayOfTheWeek': i % 7,
                     'day': this.getDayName(i),
                     'shifts': this.getWeekendDayShifts()
                 }
             } else {
                 tmpData = {
                     'number': i - randomFirstDay,
+                    'dayOfTheWeek': i % 7,
                     'day': this.getDayName(i),
                     'shifts': this.getNormalDayShifts()
                 }

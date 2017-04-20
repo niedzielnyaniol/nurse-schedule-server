@@ -3,7 +3,10 @@ angular.module('app')
 
     return{
         restrict: 'EA',
-        templateUrl: 'calendar_day.html'
+        templateUrl: 'calendar_day.html',
+        scope:{
+            dayNumber: '@'
+        }
     };
     
 });

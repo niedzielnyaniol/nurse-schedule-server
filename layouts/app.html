@@ -16,9 +16,20 @@
             <button ng-disabled="isDisabled" ng-hide="isHidden" class="btn btn-primary btn-lg btn-block" ng-click="generateSchedule()">Generate Shedule</button>
 
             <div ng-if="calendar" class="calendar-container">
-                <div ng-repeat="day in calendar">
-                    <ns-calendar-day></ns-calendar-day>
+
+                <div ng-repeat="dayOfTheWeek in days" class="day-of-the-week">
+                    {{dayOfTheWeek}}
                 </div>
+                <div class="clearfix"></div>
+                
+                <div class="calendar-day" style="{{marginFirst}}">
+                    <ns-calendar-day day-number="1"></ns-calendar-day>
+                </div>
+                
+                <div ng-repeat="day in calendar" class="calendar-day" ng-if="!$first">
+                    <ns-calendar-day day-number="{{day['number']}}"></ns-calendar-day>
+                </div>
+                <div class="clearfix"></div>
             </div>
             
         </div>

@@ -3,6 +3,15 @@ angular.module('app')
     
     $scope.isDisabled = false;
     $scope.isHidden = false;
+    $scope.days = [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday'
+    ];
     
     $scope.generateSchedule = function(){
         
@@ -10,8 +19,10 @@ angular.module('app')
         
         ApplicationService.fetchData()
             .then(function success(data){
-                $scope.isHidden = true;
+                // $scope.isHidden = true;
+                $scope.isDisabled = false;
                 $scope.calendar = data.data;
+                $scope.marginFirst = 'margin-left:' + (data.data[0].dayOfTheWeek * 120) + 'px';
             });
     };
          
