@@ -25,6 +25,15 @@ gulp.task('watch:js', ['js'], function(){
     gulp.watch('ng/**/*.js', ['js']);
 });
 
+gulp.task('css', function(){
+    gulp.src('css/**/*.css')
+        .pipe(gulp.dest('assets'));
+});
+
+gulp.task('watch:css', ['css'], function(){
+    gulp.watch('css/**/*.css', ['css']);
+});
+
 gulp.task( 'dev:server' , function(){
     nodemon( {
         script: 'server.js',
@@ -33,4 +42,4 @@ gulp.task( 'dev:server' , function(){
     } );
 } );
 
-gulp.task('dev', ['watch:js', 'dev:server']);
+gulp.task('dev', ['watch:js', 'dev:server', 'watch:css']);

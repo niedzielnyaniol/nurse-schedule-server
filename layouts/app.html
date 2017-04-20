@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/main.css">
     </head>
     <body ng-app="app" ng-controller="ApplicationController">
         <div class="container">
@@ -14,9 +15,9 @@
             </div>
             <button ng-disabled="isDisabled" ng-hide="isHidden" class="btn btn-primary btn-lg btn-block" ng-click="generateSchedule()">Generate Shedule</button>
 
-            <div ng-if="calendar">
+            <div ng-if="calendar" class="calendar-container">
                 <div ng-repeat="day in calendar">
-                    {{day['number']}}
+                    <ns-calendar-day></ns-calendar-day>
                 </div>
             </div>
             
