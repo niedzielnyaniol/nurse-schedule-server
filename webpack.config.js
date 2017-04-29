@@ -7,7 +7,7 @@ module.exports = {
   },
   target: 'node',
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/assets',
     filename: 'app.js',
     publicPath: '/assets'
   },
@@ -16,6 +16,7 @@ module.exports = {
       test: /\.js$/,
       use: [{
         loader: 'babel-loader',
+        exclude: /node_modules/,
         options: { presets: ['es2015'] }
       }]
     }
@@ -30,6 +31,6 @@ module.exports = {
       ]
     }]
   },
-  devtool: 'eval-source-map'
+  devtool: '#inline-source-map'
 };
 

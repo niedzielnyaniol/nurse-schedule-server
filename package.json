@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/niedzielnyaniol/nurse-project-frontend#readme",
   "dependencies": {
+    "angular": "^1.6.4",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "gulp": "^3.9.1",
