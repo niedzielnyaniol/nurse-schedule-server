@@ -3,13 +3,10 @@ const dataFaker = require('../modules/dataFaker');
 
 router.get('/', function(req, res, next){  
     var randomFirstDay = dataFaker.getRandomInt(0, 6);
-    var data = dataFaker.getData(randomFirstDay);
+    var data = {shedule:dataFaker.getData(randomFirstDay)};
     
     console.log(JSON.stringify(data, null, 4));  
-
-    setTimeout(function(){
-        res.json(data);
-    }, 1000);
+    res.json(data);
 });
 
 module.exports = router;
