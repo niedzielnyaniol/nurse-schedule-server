@@ -14,8 +14,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias eaque odio temporibus itaque dolorem, numquam qui, minus nemo inventore aperiam iste dolorum nam, pariatur harum possimus tempore ipsam ipsum.</p>
             </div>
             <button ng-disabled="vm.isDisabled" ng-hide="vm.isHidden" class="btn btn-primary btn-lg btn-block" ng-click="vm.generateSchedule()">Generate Shedule</button>
-
-            <div ng-if="calendar" class="calendar-container">
+            {{vm.siema}}
+            <div ng-if="vm.calendar" class="calendar-container">
 
                 <div ng-repeat="dayOfTheWeek in vm.days" class="day-of-the-week">
                     {{dayOfTheWeek}}

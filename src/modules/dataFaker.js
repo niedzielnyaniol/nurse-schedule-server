@@ -99,16 +99,20 @@ dataFaker = {
 
         var data = [];
 
-        for(let i = 0 + randomFirstDay; i < 35 + randomFirstDay; i++){
+        for(let i = 1 + randomFirstDay; i <= 35 + randomFirstDay; i++){
             let tmpData = {};
 
             if((i % 7 == 5 || i % 7 == 6) && i != 0){
-                tmpData[i - randomFirstDay] = {
+                tmpData = {
+                    'number': i - randomFirstDay,
+                    'dayOfTheWeek': i % 7,
                     'day': this.getDayName(i),
                     'shifts': this.getWeekendDayShifts()
                 }
             } else {
-                tmpData[i - randomFirstDay] = {
+                tmpData = {
+                    'number': i - randomFirstDay,
+                    'dayOfTheWeek': i % 7,
                     'day': this.getDayName(i),
                     'shifts': this.getNormalDayShifts()
                 }
