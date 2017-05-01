@@ -6,4 +6,4 @@ export default class nsCalendarDay {
         dayNumber: '@'
     }
   }
-}
+} 

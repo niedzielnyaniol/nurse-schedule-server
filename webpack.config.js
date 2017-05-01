@@ -12,25 +12,16 @@ module.exports = {
     publicPath: '/assets'
   },
   module: {
-    rules: {
-      test: /\.js$/,
-      use: [{
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: { presets: ['es2015'] }
-      }]
-    }
-  },
-  module: {
-    rules: [{
-      test: /\.(sass|scss)$/,
-      use: [
-        'style-loader',
-        'css-loader',
-        'sass-loader',
-      ]
-    }]
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['es2015'] },
+        }],
+      },
+    ],
   },
   devtool: '#inline-source-map'
 };
-
