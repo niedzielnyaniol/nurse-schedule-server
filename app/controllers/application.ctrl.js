@@ -1,7 +1,7 @@
 import AplicationService from '../services/application.svc';
 
 export default class ApplicationController {
-    constructor(ApplicationService) {
+    constructor( ApplicationService ) {
         this.ApplicationService = ApplicationService;
         this.isDisabled = false;
         this.isHidden = false;
@@ -21,12 +21,12 @@ export default class ApplicationController {
         this.isDisabled = true;
 
         this.ApplicationService.fetchData()
-            .then(( data ) => {
+            .then( ( data ) => {
                 this.isDisabled = false;
                 this.calendar = data.data;
-                this.marginFirst = 'margin-left:' + (data.data[0].dayOfTheWeek * 120) + 'px';
+                this.marginFirst = 'margin-left:' + ( data.data[0].dayOfTheWeek * 120 ) + 'px';
             } );
     }
 }
 
-ApplicationController.$inject = ['ApplicationService'];
+ApplicationController.$inject = [ 'ApplicationService' ];
