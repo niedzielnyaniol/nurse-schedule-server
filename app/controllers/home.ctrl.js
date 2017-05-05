@@ -28,5 +28,3 @@ export default class HomeCtrl {
             } );
     }
 }
-
-HomeCtrl.$inject = [ 'HomeSvc' ];

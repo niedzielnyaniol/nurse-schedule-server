@@ -1,13 +1,16 @@
-export default function routing( $routeProvider ){
+export default function routing( $routeProvider, $locationProvider ){
+  'ngInject';
+  
   $routeProvider.when( '/', {
     templateUrl: 'home.html',
     controller: 'HomeCtrl',
     controllerAs: 'vm'
   } ).when( '/nurse', {
     templateUrl: 'nurse.html',
-    controller: 'nurseCtrl',
+    controller: 'NurseCtrl',
     controlerAs: 'vm'
-  } )
-}
+  } );
 
-routing.$inject = [ '$routeProvider' ];
+  $locationProvider.html5Mode( true );
+  $locationProvider.html5Mode(true).hashPrefix('!');
+}

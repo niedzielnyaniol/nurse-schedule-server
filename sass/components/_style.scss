@@ -1,0 +1,60 @@
+body{
+    min-height: 1300px;
+}
+
+.calendar {
+    margin: 0 auto;
+    width: calc(7 * 120px);
+    margin-top: 100px;
+    
+    &__day {
+
+        $day: &;
+        
+        width: 120px;
+        float: left;
+        text-align: center;
+        border: 1px solid #fff;
+        color: #fff;
+        background: #337ab7;
+        height: 120px;
+        transition: .4s;
+        cursor: pointer;
+
+        &:last-of-type::after {
+            content: "";
+            float: none;
+            clear: both;
+            display: table;
+        }
+
+        &:hover {
+            background: #286090;
+
+            .calendar__desc {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
+        &--of-week {
+            height: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            background: #1b4a73;
+            cursor: auto;
+
+            &:hover {
+                background: #1b4a73;
+            }
+        }
+    }
+
+    &__desc {
+        line-height: 120px;
+        font-size: 32px;
+        font-weight: bold;
+        color: #fff;
+        display: block;
+    }
+}

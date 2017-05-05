@@ -1,5 +1,4 @@
 export default class HomeSvc {
-    
     constructor( $http ) {
         this.$http = $http;
     }
@@ -8,5 +7,3 @@ export default class HomeSvc {
         return this.$http.get( '/api/faker' );
     }
 }
-
-HomeSvc.$inject = ['$http'];
