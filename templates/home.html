@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>Nurse Sheduler</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias eaque odio temporibus itaque dolorem, numquam qui, minus nemo inventore aperiam iste dolorum nam, pariatur harum possimus tempore ipsam ipsum.</p>
+    </div>
+    <button ng-disabled="vm.isDisabled" ng-hide="vm.isHidden" class="btn btn-primary btn-lg btn-block" ng-click="vm.generateSchedule()">Generate Shedule</button>
+    {{vm.siema}}
+    <div ng-if="vm.calendar" class="calendar-container">
+
+        <div ng-repeat="dayOfTheWeek in vm.days" class="day-of-the-week">
+            {{dayOfTheWeek}}
+        </div>
+        <div class="clearfix"></div>
+        
+        <div class="calendar-day" style="{{vm.marginFirst}}">
+            <ns-calendar-day day-number="1"></ns-calendar-day>
+        </div>
+        
+        <div ng-repeat="day in vm.calendar" class="calendar-day" ng-if="!$first">
+            <ns-calendar-day day-number="{{day['number']}}"></ns-calendar-day>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+</div>

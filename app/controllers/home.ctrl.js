@@ -1,8 +1,8 @@
-import AplicationService from '../services/application.svc';
+import HomeSvc from '../services/home.svc';
 
-export default class ApplicationController {
-    constructor( ApplicationService ) {
-        this.ApplicationService = ApplicationService;
+export default class HomeCtrl {
+    constructor( HomeSvc ) {
+        this.HomeSvc = HomeSvc;
         this.isDisabled = false;
         this.isHidden = false;
         this.days = [
@@ -20,7 +20,7 @@ export default class ApplicationController {
 
         this.isDisabled = true;
 
-        this.ApplicationService.fetchData()
+        this.HomeSvc.fetchData()
             .then( ( data ) => {
                 this.isDisabled = false;
                 this.calendar = data.data;
@@ -29,4 +29,4 @@ export default class ApplicationController {
     }
 }
 
-ApplicationController.$inject = [ 'ApplicationService' ];
+HomeCtrl.$inject = [ 'HomeSvc' ];

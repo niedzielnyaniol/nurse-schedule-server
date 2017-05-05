@@ -1,4 +1,4 @@
-export default class ApplicationService {
+export default class HomeSvc {
     
     constructor( $http ) {
         this.$http = $http;
@@ -9,4 +9,4 @@ export default class ApplicationService {
     }
 }
 
-ApplicationService.$inject = ['$http'];
+HomeSvc.$inject = ['$http'];
