@@ -1,15 +1,21 @@
 import angular from 'angular';
 import ngRoute from 'angular-route';
+
 import HomeCtrl from './controllers/home.ctrl';
-import HomeSvc from './services/home.svc';
+import DaysCtrl from './controllers/days.ctrl';
+
+import ApiService from './services/api.service';
+import DataService from './services/data.service';
+
 import NsCalendarDay from './directives/calendar_day/calendar_day';
+
 import routing from './config/app.config';
-import NurseCtrl from './controllers/nurse.ctrl';
 
 angular.module('app', [
   ngRoute
 ]).controller('HomeCtrl', HomeCtrl)
-  .controller('NurseCtrl', NurseCtrl)
-  .service('HomeSvc', HomeSvc)
+  .controller('DaysCtrl', DaysCtrl)
+  .service('ApiService', ApiService)
+  .service('DataService', DataService)
   .directive('nsCalendarDay', () => new NsCalendarDay())
   .config(routing);

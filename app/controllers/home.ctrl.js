@@ -1,6 +1,6 @@
 class HomeCtrl {
-  constructor(HomeSvc) {
-    this.HomeSvc = HomeSvc;
+  constructor(DataService, ApiService) {
+    this.apiService = ApiService;
     this.isDisabled = false;
     this.isHidden = false;
     this.days = [
@@ -17,7 +17,7 @@ class HomeCtrl {
   generateSchedule() {
     this.isDisabled = true;
 
-    this.HomeSvc.fetchData()
+    this.apiService.fetchData()
       .then((data) => {
         this.isDisabled = false;
         this.calendar = data.data;
@@ -26,6 +26,6 @@ class HomeCtrl {
   }
 }
 
-HomeCtrl.$inject = ['HomeSvc'];
+HomeCtrl.$inject = ['DataService', 'ApiService'];
 
 export default HomeCtrl;

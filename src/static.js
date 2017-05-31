@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 
 router.get('/', (req, res) => {
-  res.sendFile(path.resolve(path.join(__dirname, '/../layouts/app.html')));
+  res.sendFile(path.join(path.join(__dirname, '/../layouts/app.html')));
 });
 
 router.use(express.static(path.join(__dirname, '/../assets')));

@@ -44,6 +44,7 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-util": "^3.0.8",
+    "lodash": "^4.17.4",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
   },
