@@ -8,6 +8,10 @@ Install the dependencies and devDependencies and start the server.
 $ npm install -d
 ```
 
+```sh
+$ npm install -g webpack
+```
+
 
 ### Development
 
@@ -20,11 +24,5 @@ Make a change in your file and instantanously see your updates!
 Open your favorite Terminal and run these command:
 
 ```sh
-$ gulp dev
-```
-```sh
-$ webpack --watch
-```
-```sh
-$ nodemon server
+$ npm run start
 ```
