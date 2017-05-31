@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb-base", "angular"],
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0,
+    "comma-dangle": 0,
+    "class-methods-use-this": 0,
+    "linebreak-style" : 0,
+    "no-plusplus": 0,
+    "angular/controller-name": 0,
+    "angular/no-service-method": 0
+  },
+  "globals": {
+    "angular": true
+  }
+}
