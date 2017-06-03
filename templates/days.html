@@ -2,17 +2,17 @@
 <h2>Shifts in that day:</h2>
 <h3>Early day:</h3>
   <div ng-repeat="shift in vm.data.shifts[0]">
-    <p>{{$index + 1}} {{vm.getNurse(shift).firstName}} {{vm.getNurse(shift).secondName}} <a href="">more details</a></p>
+    <p>{{$index + 1}} {{vm.getNurse(shift).firstName}} {{vm.getNurse(shift).secondName}} <a href="/nurse/{{shift}}">more details</a></p>
   </div>
 <h3>Day:</h3>
   <div ng-repeat="shift in vm.data.shifts[1]">
-    <p>{{$index + 1}} {{vm.getNurse(shift).firstName}} {{vm.getNurse(shift).secondName}} <a href="">more details</a></p>
+    <p>{{$index + 1}} {{vm.getNurse(shift).firstName}} {{vm.getNurse(shift).secondName}} <a href="/nurse/{{shift}}">more details</a></p>
   </div>
 <h3>Late Day:</h3>
   <div ng-repeat="shift in vm.data.shifts[2]">
-    <p>{{$index + 1}} {{vm.getNurse(shift).firstName}} {{vm.getNurse(shift).secondName}} <a href="">more details</a></p>
+    <p>{{$index + 1}} {{vm.getNurse(shift).firstName}} {{vm.getNurse(shift).secondName}} <a href="/nurse/{{shift}}">more details</a></p>
   </div>
 <h3>Night:</h3>
   <div ng-repeat="shift in vm.data.shifts[3]">
-    <p>{{$index + 1}} {{vm.getNurse(shift).firstName}} {{vm.getNurse(shift).secondName}} <a href="">more details</a></p>
+    <p>{{$index + 1}} {{vm.getNurse(shift).firstName}} {{vm.getNurse(shift).secondName}} <a href="/nurse/{{shift}}">more details</a></p>
   </div>

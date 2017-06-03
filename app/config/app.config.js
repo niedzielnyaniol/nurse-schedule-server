@@ -7,6 +7,10 @@ const routing = ($routeProvider, $locationProvider) => {
     templateUrl: 'days.html',
     controller: 'DaysCtrl',
     controllerAs: 'vm'
+  }).when('/nurse/:id', {
+    templateUrl: 'nurse.html',
+    controller: 'DaysCtrl',
+    controllerAs: 'vm'
   });
 
   $locationProvider.html5Mode(true);
