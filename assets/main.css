@@ -5856,4 +5856,55 @@ body {
     color: #fff;
     display: block; }
 
+.shifts {
+  display: block;
+  width: calc(50% - 15px);
+  padding: 15px 0;
+  margin: 7.5px;
+  float: left;
+  background: #286090; }
+  .shifts::after {
+    float: none;
+    clear: both; }
+  .shifts__shift {
+    display: block;
+    width: 10%;
+    height: 30px;
+    border: 1px solid red;
+    border-right: 0;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    transition: background .3s; }
+    .shifts__shift:last-child {
+      border-right: 1px solid red; }
+    .shifts__shift--early-day {
+      background: green; }
+      .shifts__shift--early-day:hover {
+        background: #004d00; }
+    .shifts__shift--day {
+      background: yellow; }
+      .shifts__shift--day:hover {
+        background: #cccc00; }
+    .shifts__shift--evening {
+      background: orange; }
+      .shifts__shift--evening:hover {
+        background: #cc8400; }
+    .shifts__shift--night {
+      background: #134123; }
+      .shifts__shift--night:hover {
+        background: #071a0e; }
+  .shifts__day {
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    color: #fff;
+    text-transform: capitalize; }
+
+.shifts-container {
+  display: block;
+  float: none;
+  clear: both;
+  margin: 0 -7.5px; }
+
 /*# sourceMappingURL=maps/main.css.map */

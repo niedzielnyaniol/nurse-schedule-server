@@ -2,7 +2,8 @@ class HomeCtrl {
   constructor(ApiService) {
     this.apiService = ApiService;
     this.isDisabled = false;
-    this.isHidden = false;
+    this.changeView = false;
+    this.calendarView = true;
     this.days = [
       'Monday',
       'Tuesday',
@@ -27,7 +28,12 @@ class HomeCtrl {
       this.calendar = this.data;
       this.marginFirst = `margin-left:${this.data[0].dayOfTheWeek * 120}px`;
       this.isDisabled = false;
+      this.changeView = true;
     });
+  }
+
+  onChangeView() {
+    this.calendarView = !this.calendarView;
   }
 }
 

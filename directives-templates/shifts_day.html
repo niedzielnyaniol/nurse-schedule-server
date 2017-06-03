@@ -1,0 +1,16 @@
+<div class="shifts">
+  <span class="shifts__day">{{day.number}} {{day.day}}</span>
+  
+  <a href="" class="shifts__shift shifts__shift--early-day" ng-repeat="shift in day.shifts[0]">
+    {{shift}}
+  </a>
+  <a href="" class="shifts__shift shifts__shift--day" ng-repeat="shift in day.shifts[1]">
+    {{shift}}
+  </a>
+  <a href="" class="shifts__shift shifts__shift--evening" ng-repeat="shift in day.shifts[2]">
+    {{shift}}
+  </a>
+  <a href="" class="shifts__shift shifts__shift--night" ng-repeat="shift in day.shifts[3]">
+    {{shift}}
+  </a>
+</div>

@@ -3,9 +3,15 @@
         <h1>Nurse Sheduler</h1>
         <p>Lrereorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias eaque odio temporibus itaque dolorem, numquam qui, minus nemo inventore aperiam iste dolorum nam, pariatur harum possimus tempore ipsam ipsum.</p>
     </div>
-    <button ng-disabled="vm.isDisabled" ng-hide="vm.isHidden" class="btn btn-primary btn-lg btn-block" ng-click="vm.generateSchedule()">Generate Shedule</button>
-    {{vm.siema}}
-    <div ng-if="vm.calendar" class="calendar">
+    <button 
+        ng-disabled="vm.isDisabled"
+        class="btn btn-primary btn-lg btn-block" 
+        ng-click="vm.generateSchedule()">Generate new Shedule</button>
+    <button
+        class="btn btn-lg btn-block btn-success"
+        ng-show="vm.changeView"
+        ng-click="vm.onChangeView()">Change view</button>
+    <div ng-if="vm.calendar && vm.calendarView" class="calendar">
 
         <div ng-repeat="dayOfTheWeek in vm.days" class="calendar__day calendar__day--of-week">
             {{dayOfTheWeek}}
@@ -20,6 +26,10 @@
             <ns-calendar-day day-number="{{day['number']}}"></ns-calendar-day>
         </div>
         <div class="clearfix"></div>
+    </div>
+
+    <div ng-if="vm.calendar && !vm.calendarView" class="shifts-container">
+        <ns-shifts-day ng-repeat="day in vm.calendar" day="day"></ns-shifts-day>
     </div>
     
 </div>
