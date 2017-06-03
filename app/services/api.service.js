@@ -1,18 +1,24 @@
+/* eslint no-console: 0 */
+/* eslint angular/log: 0 */
+
 class ApiService {
-  constructor($http, DataService) {
-    this.dataService = DataService;
+  constructor($http) {
     this.$http = $http;
   }
 
   fetchData() {
     const data = this.$http.get('/api/faker');
 
-    this.dataService.setData(data);
-
     return data;
+  }
+
+  generateData() {
+    console.log('Post sent');
+
+    return this.fetchData();
   }
 }
 
-ApiService.$inject = ['$http', 'DataService'];
+ApiService.$inject = ['$http'];
 
 export default ApiService;

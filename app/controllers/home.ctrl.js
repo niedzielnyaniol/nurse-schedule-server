@@ -1,5 +1,5 @@
 class HomeCtrl {
-  constructor(DataService, ApiService) {
+  constructor(ApiService) {
     this.apiService = ApiService;
     this.isDisabled = false;
     this.isHidden = false;
@@ -12,20 +12,25 @@ class HomeCtrl {
       'Saturday',
       'Sunday'
     ];
+
+    ApiService.fetchData().then((data) => {
+      this.data = data.data;
+    });
   }
 
   generateSchedule() {
     this.isDisabled = true;
 
-    this.apiService.fetchData()
-      .then((data) => {
-        this.isDisabled = false;
-        this.calendar = data.data;
-        this.marginFirst = `margin-left:${data.data[0].dayOfTheWeek * 120}px`;
-      });
+    this.apiService.generateData().then((data) => {
+      this.data = data.data;
+    }).then(() => {
+      this.calendar = this.data;
+      this.marginFirst = `margin-left:${this.data[0].dayOfTheWeek * 120}px`;
+      this.isDisabled = false;
+    });
   }
 }
 
-HomeCtrl.$inject = ['DataService', 'ApiService'];
+HomeCtrl.$inject = ['ApiService'];
 
 export default HomeCtrl;

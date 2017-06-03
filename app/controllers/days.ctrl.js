@@ -1,15 +1,9 @@
 class DaysCtrl {
-  constructor($routeParams, DataService) {
+  constructor($routeParams) {
     this.dayNumber = $routeParams.id;
-    this.dataService = DataService;
-    this.bla = this.dataService.getDay(this.dayNumber);
-  }
-
-  getData() {
-    return this.dataService.getDay(this.dayNumber);
   }
 }
 
-DaysCtrl.$inject = ['$routeParams', 'DataService'];
+DaysCtrl.$inject = ['$routeParams'];
 
 export default DaysCtrl;
