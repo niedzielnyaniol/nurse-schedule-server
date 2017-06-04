@@ -9,6 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use('/api/faker', require('./src/api/faker'));
+app.use('/get-csv', require('./src/api/csv-generator'));
 app.use(require('./src/static'));
 
 app.use('/img', express.static(path.join(__dirname, 'img')));

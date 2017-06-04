@@ -11,6 +11,10 @@
         class="btn btn-lg btn-block btn-danger"
         ng-show="vm.changeView"
         ng-click="vm.onChangeView()">Change view</button>
+    <a
+        href="/get-csv"
+        class="btn btn-lg btn-block btn-success"
+        ng-show="vm.changeView">Generate CSV file</a>
     <div ng-if="vm.calendar && vm.calendarView" class="calendar">
 
         <div ng-repeat="dayOfTheWeek in vm.days" class="calendar__day calendar__day--of-week">

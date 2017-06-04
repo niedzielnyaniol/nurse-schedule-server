@@ -44,6 +44,7 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-util": "^3.0.8",
+    "json2csv": "^3.7.3",
     "lodash": "^4.17.4",
     "mongoose": "^4.10.4",
     "webpack": "^2.4.1",
