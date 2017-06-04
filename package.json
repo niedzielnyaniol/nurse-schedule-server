@@ -47,6 +47,7 @@
     "json2csv": "^3.7.3",
     "lodash": "^4.17.4",
     "mongoose": "^4.10.4",
+    "request": "^2.81.0",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
   },
