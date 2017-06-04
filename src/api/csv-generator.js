@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
     }
   ];
 
-  const csv = json2csv({ data: myCars, fields: fields, del: ';' });
+  const csv = json2csv({ data: myCars, fields, del: ';' });
 
   fs.writeFile('nurse-sheduler.csv', csv, (err) => {
     if (err) {

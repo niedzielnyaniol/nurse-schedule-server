@@ -17,6 +17,10 @@ class ApiService {
 
     return this.fetchData();
   }
+
+  generateCsv() {
+    return this.$http.get('/get-csv');
+  }
 }
 
 ApiService.$inject = ['$http'];

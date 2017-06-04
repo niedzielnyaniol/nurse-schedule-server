@@ -11,7 +11,7 @@ const routing = ($routeProvider, $locationProvider) => {
     templateUrl: 'nurses-info.html',
     controller: 'HomeCtrl',
     controllerAs: 'vm'
-  }).when('/:id', {
+  }).when('/day/:id', {
     templateUrl: 'days.html',
     controller: 'HomeCtrl',
     controllerAs: 'vm'

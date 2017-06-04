@@ -12,6 +12,8 @@
         ng-show="vm.changeView"
         ng-click="vm.onChangeView()">Change view</button>
     <a
+        target="_self"
+        download="nurse-scheduler.csv"
         href="/get-csv"
         class="btn btn-lg btn-block btn-success"
         ng-show="vm.changeView">Generate CSV file</a>
