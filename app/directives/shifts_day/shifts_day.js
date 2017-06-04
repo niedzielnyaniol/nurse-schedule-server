@@ -3,7 +3,8 @@ export default class nsShiftsDay {
     this.restrict = 'EA';
     this.templateUrl = 'shifts_day.html';
     this.scope = {
-      day: '='
+      day: '=',
+      test: '&'
     };
   }
 }

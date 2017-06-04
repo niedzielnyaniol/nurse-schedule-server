@@ -5,11 +5,11 @@ const routing = ($routeProvider, $locationProvider) => {
     controllerAs: 'vm'
   }).when('/:id', {
     templateUrl: 'days.html',
-    controller: 'DaysCtrl',
+    controller: 'HomeCtrl',
     controllerAs: 'vm'
   }).when('/nurse/:id', {
     templateUrl: 'nurse.html',
-    controller: 'DaysCtrl',
+    controller: 'HomeCtrl',
     controllerAs: 'vm'
   });
 

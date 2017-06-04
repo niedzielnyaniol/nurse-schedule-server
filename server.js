@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 app.use('/api/faker', require('./src/api/faker'));
 app.use(require('./src/static'));
 
+app.use('/img', express.static(path.join(__dirname, 'img')));
+
+
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '/layouts/app.html'));
 });

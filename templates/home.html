@@ -1,14 +1,14 @@
 <div class="container">
     <div class="jumbotron">
-        <h1>Nurse Sheduler</h1>
+        <h1 class="lobster">Nurse Sheduler</h1>
         <p>Lrereorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias eaque odio temporibus itaque dolorem, numquam qui, minus nemo inventore aperiam iste dolorum nam, pariatur harum possimus tempore ipsam ipsum.</p>
     </div>
-    <button 
+    <button
         ng-disabled="vm.isDisabled"
-        class="btn btn-primary btn-lg btn-block" 
+        class="btn btn-primary btn-lg btn-block"
         ng-click="vm.generateSchedule()">Generate new Shedule</button>
     <button
-        class="btn btn-lg btn-block btn-success"
+        class="btn btn-lg btn-block btn-danger"
         ng-show="vm.changeView"
         ng-click="vm.onChangeView()">Change view</button>
     <div ng-if="vm.calendar && vm.calendarView" class="calendar">
@@ -17,19 +17,35 @@
             {{dayOfTheWeek}}
         </div>
         <div class="clearfix"></div>
-        
+
         <div class="calendar__day" style="{{vm.marginFirst}}">
             <ns-calendar-day day-number="1"></ns-calendar-day>
         </div>
-        
         <div ng-repeat="day in vm.calendar" class="calendar__day" ng-if="!$first">
             <ns-calendar-day day-number="{{day['number']}}"></ns-calendar-day>
         </div>
         <div class="clearfix"></div>
     </div>
 
-    <div ng-if="vm.calendar && !vm.calendarView" class="shifts-container">
-        <ns-shifts-day ng-repeat="day in vm.calendar" day="day"></ns-shifts-day>
+    <div class="row shifts-colors" ng-if="vm.calendar && !vm.calendarView">
+      <div class="col-xs-12 shifts-colors__text">Shifts color*</div>
+      <div class="col-xs-3">
+        <div class="colors colors--early-day">Early-day shift</div>
+      </div>
+      <div class="col-xs-3">
+         <div class="colors colors--day">Day shift</div>
+      </div>
+      <div class="col-xs-3">
+        <div class="colors colors--late-day">Lade-day shift</div>
+      </div>
+      <div class="col-xs-3">
+        <div class="colors colors--night">Night shift</div>
+      </div>
     </div>
-    
+
+    <div ng-if="vm.calendar && !vm.calendarView" class="shifts-container">
+
+        <ns-shifts-day ng-repeat="day in vm.calendar" day="day" test="vm.getNurseInitials(id)"></ns-shifts-day>
+    </div>
+
 </div>

@@ -1,17 +1,10 @@
-$early-day-color: green;
-$day-color: yellow;
-$evening-color: orange;
-$night-color: #134123;
-$base-color:#286090;
-
-body {
-  min-height: 1300px;
-}
+$day-color: darken(rgb(255, 243, 88), 10%);
+$night-color: #26262a;
 
 .calendar {
   margin: 0 auto;
   width: calc(7 * 120px);
-  margin-top: 100px;
+  margin-top: 50px;
   &__day {
     $day: &;
     width: 120px;
@@ -19,7 +12,7 @@ body {
     text-align: center;
     border: 1px solid #fff;
     color: #fff;
-    background: #337ab7;
+    background: $brand-primary;
     height: 120px;
     transition: .4s;
     cursor: pointer;
@@ -30,20 +23,23 @@ body {
       display: table;
     }
     &:hover {
-      background: $base-color;
+      background: darken($brand-primary, 30%);
       .calendar__desc {
         color: #fff;
         text-decoration: none;
       }
     }
     &--of-week {
+      font-family: $lobster;
       height: 50px;
+      font-size: 19px;
       line-height: 50px;
       font-weight: bold;
-      background: #1b4a73;
+      background: darken($brand-primary, 15%);
       cursor: auto;
+
       &:hover {
-        background: #1b4a73;
+        background: darken($brand-primary, 15%);
       }
     }
   }
@@ -59,10 +55,24 @@ body {
 .shifts {
   display: block;
   width: calc(50% - 15px);
-  padding: 15px 0;
+  padding: 15px 5px;
   margin: 7.5px;
   float: left;
-  background: $base-color;
+  background: $brand-primary;
+  border-radius: $border-radius-base;
+
+  &__overflow {
+    background: lighten($brand-primary, 10%);
+    border-radius: $border-radius-base;
+    border: 1px solid darken($brand-primary, 5%);
+
+    &:after {
+      content: "";
+      clear: both;
+      float: none;
+      display: block;
+    }
+  }
 
   &::after {
     float: none;
@@ -71,58 +81,75 @@ body {
 
   &__shift {
     display: block;
-    width: 10%;
-    height: 30px;
-    border: 1px solid red;
-    border-right: 0;
-    line-height: 30px;
+    width: calc(10% - 10px);
+    margin: 5px;
+    height: 46px;
+    line-height: 46px;
     float: left;
     text-align: center;
-    transition: background .3s;
+    transition: .3s;
+    border-radius: $border-radius-base;
+    color: #fff;
+    font-weight: bold;
 
-
-    &:last-child {
-      border-right: 1px solid red;
+    &:hover {
+      color: #fefefe;
+      text-decoration: none;
+      background-image: url(../img/timers.png);
+      background-size: 200px;
     }
 
     &--early-day {
-      background: $early-day-color;
-      
+      background-color: $brand-success;
+      border: 1px solid darken($brand-success, 10%);
+      background-position: -201px 1px;
+
       &:hover {
-        background: darken($early-day-color, 10%);
+        background-color: darken($brand-success, 10%);
+        background-position: -1px 1px;
       }
     }
 
     &--day {
-      background: $day-color;
-      
+      background-color: $day-color;
+      border: 1px solid darken($day-color, 10%);
+      background-position: -147px 1px;
+
       &:hover {
-        background: darken($day-color, 10%);
+        background-color: darken($day-color, 10%);
+        background-position: 147px 1px;
       }
     }
 
     &--evening {
-      background: $evening-color;
-      
+      background-color: $brand-warning;
+      border: 1px solid darken($brand-warning, 10%);
+      background-position: -194px 1px;
+
       &:hover {
-        background: darken($evening-color, 10%);
+        background-color: darken($brand-warning, 10%);
+        background-position: 94px 1px;
       }
     }
 
     &--night {
-      background: $night-color;
-      
+      background-color: $night-color;
+      border: 1px solid darken($night-color, 10%);
+      background-position: 43px 1px;
+
       &:hover {
-        background: darken($night-color, 10%);
+        background-color: lighten($night-color, 90%);
+        background-position: 243px 1px;
       }
     }
   }
 
   &__day {
     display: block;
-    padding-left: 10px;
+    padding-left: 5px;
     padding-bottom: 5px;
     color: #fff;
+    font-family: $lobster;
     text-transform: capitalize;
   }
 }
@@ -132,4 +159,43 @@ body {
   float: none;
   clear: both;
   margin: 0 -7.5px;
+  margin-top: 25px;
+}
+
+.lobster {
+  font-family: $lobster;
+}
+
+.shifts-colors {
+  margin-top: 25px;
+
+  &__text {
+    font-family: $lobster;
+    padding-bottom: 10px;
+  }
+}
+
+.colors{
+  height: 30px;
+  border-radius: $border-radius-base;
+  line-height: 30px;
+  padding-left: 15px;
+  color: #fff;
+
+  &--early-day {
+    background: $brand-success;
+  }
+
+  &--day {
+    background: $day-color;
+    color: rgb(145, 145, 145);
+  }
+
+  &--late-day {
+    background: $brand-warning;
+  }
+
+  &--night {
+    background: $night-color;
+  }
 }
