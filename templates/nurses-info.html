@@ -1,0 +1,8 @@
+<h1 class="lobster">Nurses info:</h1>
+
+<div ng-repeat="nurse in vm.getNurses()">
+  <div class="nurse">
+    <p>{{nurse.firstName}} {{nurse.secondName}} {{nurse.surname}}</p>
+    <span>phone: {{nurse.phoneNumber}}</span>
+  </div>
+</div>
