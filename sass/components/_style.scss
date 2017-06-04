@@ -59,7 +59,7 @@ $night-color: #26262a;
   margin: 7.5px;
   float: left;
   background: $brand-primary;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius-base;  
 
   &__overflow {
     background: lighten($brand-primary, 10%);
@@ -87,7 +87,7 @@ $night-color: #26262a;
     line-height: 46px;
     float: left;
     text-align: center;
-    transition: .3s;
+    transition: .8s;
     border-radius: $border-radius-base;
     color: #fff;
     font-weight: bold;
@@ -113,7 +113,7 @@ $night-color: #26262a;
     &--day {
       background-color: $day-color;
       border: 1px solid darken($day-color, 10%);
-      background-position: -147px 1px;
+      background-position: -53px 1px;
 
       &:hover {
         background-color: darken($day-color, 10%);
@@ -124,7 +124,7 @@ $night-color: #26262a;
     &--evening {
       background-color: $brand-warning;
       border: 1px solid darken($brand-warning, 10%);
-      background-position: -194px 1px;
+      background-position: -106px 1px;
 
       &:hover {
         background-color: darken($brand-warning, 10%);
@@ -145,6 +145,7 @@ $night-color: #26262a;
   }
 
   &__day {
+    line-height: 30px;
     display: block;
     padding-left: 5px;
     padding-bottom: 5px;

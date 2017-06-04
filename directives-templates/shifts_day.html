@@ -1,5 +1,5 @@
 <div class="shifts">
-  <span class="shifts__day">{{day.number}} {{day.day}}</span>
+  <span class="shifts__day">{{day.number}} {{day.day}} <a href="/{{day.number}}" class="btn btn-danger btn-sm" style="float:right; font-family: 'lato'">More details</a><span class="clearfix"></span></span>
 
   <div class="shifts__overflow">
     <a href="/nurse/{{shift}}" class="shifts__shift shifts__shift--early-day" ng-repeat="shift in day.shifts[0]">

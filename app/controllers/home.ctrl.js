@@ -43,6 +43,10 @@ class HomeCtrl {
     return this.dataService.getNurse(id);
   }
 
+  getNurses() {
+    return this.dataService.getNurses();
+  }
+
   getNurseInitials(id) {
     const nurse = this.getNurse(id);
 

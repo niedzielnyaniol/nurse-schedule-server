@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Shedule</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
-        <link rel="stylesheet" href="/main.css">
-        <base href="/" target="">
-    </head>
-    <body ng-app="app">
-        <div ng-view class="container"></div>
-        <script src="/app.js"></script>
-    </body>
+
+<head>
+  <title>Shedule</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <base href="/" target="">
+</head>
+
+<body ng-app="app">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+              <img alt="Brand" src="./img/logo.png">
+              <span class="lobster">Nurse Scheduler</span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/nurses-info">Nurses Info</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div ng-view class="container"></div>
+  <script src="/app.js"></script>
+</body>
+
 </html>

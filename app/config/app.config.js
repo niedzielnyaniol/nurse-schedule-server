@@ -3,12 +3,16 @@ const routing = ($routeProvider, $locationProvider) => {
     templateUrl: 'home.html',
     controller: 'HomeCtrl',
     controllerAs: 'vm'
-  }).when('/:id', {
-    templateUrl: 'days.html',
-    controller: 'HomeCtrl',
-    controllerAs: 'vm'
   }).when('/nurse/:id', {
     templateUrl: 'nurse.html',
+    controller: 'HomeCtrl',
+    controllerAs: 'vm'
+  }).when('/nurses-info', {
+    templateUrl: 'nurses-info.html',
+    controller: 'HomeCtrl',
+    controllerAs: 'vm'
+  }).when('/:id', {
+    templateUrl: 'days.html',
     controller: 'HomeCtrl',
     controllerAs: 'vm'
   });

@@ -1,3 +1,5 @@
+
+
 class DataService {
   constructor(config) {
     this.data = config.nurses;
@@ -5,6 +7,10 @@ class DataService {
 
   getNurse(nurseNumber) {
     return this.data[nurseNumber - 1];
+  }
+
+  getNurses() {
+    return this.data;
   }
 }
 
