@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/api/faker', require('./src/api/faker'));
+app.use('/api/', require('./src/api/api'));
 app.use('/get-csv', require('./src/api/csv-generator'));
 app.use(require('./src/static'));
 
