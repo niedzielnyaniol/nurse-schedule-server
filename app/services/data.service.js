@@ -1,5 +1,3 @@
-
-
 class DataService {
   constructor(config) {
     this.data = config.nurses;
@@ -14,4 +12,6 @@ class DataService {
   }
 }
 
-export default DataService;
+DataService.$inject = ['config'];
+
+exports.module = DataService;

@@ -2,8 +2,7 @@ const router = require('express').Router();
 const dataFaker = require('../modules/dataFaker');
 
 router.get('/faker', (req, res) => {
-  const randomFirstDay = dataFaker.getRandomInt(0, 6);
-  const data = dataFaker.getData(randomFirstDay);
+  const data = dataFaker.getData(6);
 
   res.json(data);
 });
